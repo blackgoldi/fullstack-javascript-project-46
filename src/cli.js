@@ -1,28 +1,19 @@
 #!/usr/bin/env node
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-import { cwd } from 'node:process';
-
-function parseFile(filePath) {
-  const completePath = path.resolve(cwd(), filePath);
-  const data = readFileSync(completePath);
-  const json = JSON.parse(data);
-  return json;
-}
+import parser from './parser.js';
 
 function formatEntry(prefix, key, value) {
   return `  ${prefix} ${key} : ${value}`;
 }
 
 export default function findDiff(path1, path2) {
-  const firstJson = parseFile(path1);
-  const secondJson = parseFile(path2);
+  const firstJson = parser(path1);
+  const secondJson = parser(path2);
   const diff = [];
   Object.entries(firstJson).forEach(([key, value]) => {
     const secondValue = secondJson[key];
-    if (!secondValue) {
+    if (secondValue == null) {
       diff.push(formatEntry('-', key, value));
-    } else if (value !== secondValue) {
+    } else if (value != secondValue) {
       diff.push(formatEntry('-', key, value));
       diff.push(formatEntry('+', key, secondValue));
     } else {

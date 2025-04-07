@@ -19,4 +19,9 @@ gendiff [option] <filepath1> <filepath2>
 gendiff -h
 ```
 
-https://asciinema.org/a/jZFBISHVF4BfgLHRsWrMLKk3k
+gendiff
+<a href="https://asciinema.org/a/709443" target="_blank"><img src="https://asciinema.org/a/709443.svg" /></a>
+
+
+gendiff with json and yaml files
+<a href="https://asciinema.org/a/712360" target="_blank"><img src="https://asciinema.org/a/712360.svg" /></a>
