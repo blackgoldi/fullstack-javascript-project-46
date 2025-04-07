@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/blackgoldi/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/blackgoldi/fullstack-javascript-project-46/actions)
-[![Code Coverage](https://qlty.sh/badges/e960f546-7ace-4251-a76a-ebb8f8e90499/test_coverage.svg)](https://qlty.sh/gh/blackgoldi/projects/fullstack-javascript-project-46)
+[![Maintainability](https://qlty.sh/badges/e960f546-7ace-4251-a76a-ebb8f8e90499/maintainability.svg)](https://qlty.sh/gh/blackgoldi/projects/fullstack-javascript-project-46)
 
 ## Setup
 
