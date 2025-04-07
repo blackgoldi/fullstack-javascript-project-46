@@ -1,0 +1,32 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Это второй учебный проект. Вычислитель отличий",
+  "main": "gendiff.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackgoldi/fullstack-javascript-project-46.git"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackgoldi/fullstack-javascript-project-46/issues"
+  },
+  "homepage": "https://github.com/blackgoldi/fullstack-javascript-project-46#readme",
+  "dependencies": {
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
