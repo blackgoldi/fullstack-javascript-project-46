@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "Это второй учебный проект. Вычислитель отличий",
-  "main": "gendiff.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blackgoldi/fullstack-javascript-project-46.git"

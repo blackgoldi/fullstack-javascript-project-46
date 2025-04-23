@@ -5,7 +5,8 @@ import path from 'path';
 function jsonParser(filePath) {
   const completePath = path.resolve(filePath);
   const data = readFileSync(completePath);
-  return JSON.parse(data);
+  const result = JSON.parse(data);
+  return result;
 }
 
 function yamlParser(filePath) {
