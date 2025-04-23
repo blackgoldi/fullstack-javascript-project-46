@@ -11,9 +11,7 @@ function getFixturePath(filename) {
 }
 
 test('equalJSON', () => {
-  expect(
-    findDiff(getFixturePath('file1.json'), getFixturePath('file1.json'))
-  ).toBe(
+  expect(findDiff('__fixtures__/file1.json', '__fixtures__/file1.json')).toBe(
     `{
     common: {
         setting1: Value 1
@@ -44,9 +42,7 @@ test('equalJSON', () => {
 });
 
 test('differentJSON', () => {
-  expect(
-    findDiff(getFixturePath('file1.json'), getFixturePath('file2.json'))
-  ).toBe(
+  expect(findDiff('__fixtures__/file1.json', '__fixtures__/file2.json')).toBe(
     `{
     common: {
         setting1: Value 1
@@ -95,8 +91,7 @@ test('differentJSON', () => {
 });
 
 test('equalYAML', () => {
-  expect(findDiff(getFixturePath('file1.yaml'), getFixturePath('file1.yaml')))
-    .toBe(`{
+  expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file1.yaml')).toBe(`{
     common: {
         setting1: Value 1
         setting2: 200
@@ -125,8 +120,7 @@ test('equalYAML', () => {
 });
 
 test('differentYAML', () => {
-  expect(findDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml')))
-    .toBe(`{
+  expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml')).toBe(`{
     common: {
         setting1: Value 1
       - setting2: 200
@@ -173,9 +167,8 @@ test('differentYAML', () => {
 });
 
 test('JSON format', () => {
-  expect(
-    findDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'json')
-  ).toBe(`[
+  expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'json'))
+    .toBe(`[
   {
     "type": "nested",
     "key": "common",
@@ -295,7 +288,7 @@ test('JSON format', () => {
 
 test('Plain format', () => {
   expect(
-    findDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'plain')
+    findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'plain')
   ).toBe(`Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
 Property 'common.setting6.doge.wow' was updated. From '' to 'so much'
