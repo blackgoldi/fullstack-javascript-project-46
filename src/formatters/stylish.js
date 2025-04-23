@@ -18,10 +18,7 @@ const formatNode = (node, depth, formatter) => {
     case 'removed':
       return `${indent}- ${node.key}: ${formatter(node.value, depth)}`
     case 'changed':
-      return [
-        `${indent}- ${node.key}: ${formatter(node.oldValue, depth)}`,
-        `${indent}+ ${node.key}: ${formatter(node.newValue, depth)}`,
-      ]
+      return `${indent}- ${node.key}: ${formatter(node.oldValue, depth)}\n ${indent}+ ${node.key}: ${formatter(node.newValue, depth)}`
     case 'nested':
       return `${indent}  ${node.key}: {\n${formatNodes(
         node.children,
