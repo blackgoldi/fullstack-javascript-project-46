@@ -1,14 +1,5 @@
 import { expect, test } from 'vitest';
-import findDiff from '../src/index.js';
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-function getFixturePath(filename) {
-  return path.join(__dirname, '..', '__fixtures__', filename).toString();
-}
+import findDiff from '../index.js';
 
 test('equalJSON', () => {
   expect(findDiff('__fixtures__/file1.json', '__fixtures__/file1.json')).toBe(

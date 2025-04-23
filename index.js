@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import buildDiff from './buildiff.js';
-import formatPlain from './formatters/plain.js';
-import formatStylish from './formatters/stylish.js';
-import parser from './parser.js';
-import formatJson from './formatters/json.js';
+import buildDiff from './src/buildiff.js';
+import formatPlain from './src/formatters/plain.js';
+import formatStylish from './src/formatters/stylish.js';
+import parser from './src/parser.js';
+import formatJson from './src/formatters/json.js';
 
 const formatters = {
   stylish: formatStylish,
