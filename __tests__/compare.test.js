@@ -1,5 +1,5 @@
-import { expect, test } from 'vitest';
-import findDiff from '../index.js';
+import { expect, test } from 'vitest'
+import findDiff from '../index.js'
 
 test('equalJSON', () => {
   expect(findDiff('__fixtures__/file1.json', '__fixtures__/file1.json')).toBe(
@@ -28,9 +28,9 @@ test('equalJSON', () => {
             id: 45
         }
     }
-}`
-  );
-});
+}`,
+  )
+})
 
 test('differentJSON', () => {
   expect(findDiff('__fixtures__/file2.json', '__fixtures__/file1.json')).toBe(
@@ -77,9 +77,9 @@ test('differentJSON', () => {
             id: 45
         }
     }
-}`
-  );
-});
+}`,
+  )
+})
 
 test('equalYAML', () => {
   expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file1.yaml')).toBe(`{
@@ -107,8 +107,8 @@ test('equalYAML', () => {
             id: 45
         }
     }
-}`);
-});
+}`)
+})
 
 test('differentYAML', () => {
   expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml')).toBe(`{
@@ -154,8 +154,8 @@ test('differentYAML', () => {
         }
         fee: 100500
     }
-}`);
-});
+}`)
+})
 
 test('JSON format', () => {
   expect(findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'json'))
@@ -274,12 +274,12 @@ test('JSON format', () => {
       "fee": 100500
     }
   }
-]`);
-});
+]`)
+})
 
 test('Plain format', () => {
   expect(
-    findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'plain')
+    findDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'plain'),
   ).toBe(`Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
 Property 'common.setting6.doge.wow' was updated. From '' to 'so much'
@@ -290,5 +290,5 @@ Property 'common.setting5' was added with value: [complex value]
 Property 'group1.baz' was updated. From 'bas' to 'bars'
 Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
-Property 'group3' was added with value: [complex value]`);
-});
+Property 'group3' was added with value: [complex value]`)
+})
